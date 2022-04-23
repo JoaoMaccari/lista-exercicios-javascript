@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        body{
+    background-color: rgb(70, 142, 236);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.384);
+
+}
+
+footer{
+    color: white;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1></h1>
+    </header>
+    <section>
+        <div>
+            Digite seu nome completo: <input type="text" id="nome">
+        </div>
+        
+        <p id="analise">
+            <button id="btn" onclick="mostraNome()">ANALISAR</button>
+        </p>
+        <p id="msg"></p>
+
+    </section>
+    <footer>
+        <p>&copy; Curso em vídeo</p>
+    </footer>
+    
+    <script>
+      
+       
+
+       function mostraNome() {
+            var nome = String(document.getElementById('nome').value);
+            var msg = document.getElementById('msg') 
+
+            //croi uma variavel que vai receber o input com o metodo split em cada espaço
+            const meuArreydeString = nome.split(" ")
+            //após o input estar separada, eu posso escolher qual das partes da minha string eu quero isolar e passar esta parte para uma outra variavel
+            let palavra = meuArreydeString[0]
+
+            msg.innerHTML = `Analisando seu nome... <br>
+            Seu nome em letras maiúsculas é ${nome.toUpperCase()}<br>
+            Seu nome em letras minúsculas é ${nome.toLowerCase()}<br>
+            Seu nome tem ao todo ${nome.length} letras<br>
+            Seu primeiro nome é ${palavra} e tem ${palavra.length} letras` 
+            
+       }
+    </script>
+</body>
+</html>

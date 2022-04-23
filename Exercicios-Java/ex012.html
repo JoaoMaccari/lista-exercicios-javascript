@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        body{
+    background-color: rgb(70, 142, 236);
+    font-size: 15pt;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.384);
+
+}
+
+footer{
+    color: white;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Desconto</h1>
+    </header>
+    <section>
+        <div>
+            Qual é o salário do funcionário? R$ <input type="number" id="salarioAtual">
+
+            <button id="btn"> Clique para calcular o aumento</button>
+            <p id="res"></p>
+    
+        </div>
+
+    </section>
+    <footer>
+        <p>&copy; Curso em vídeo</p>
+    </footer>
+    
+    <script>
+        
+        var p = document.getElementById('res');
+        var btn = document.getElementById('btn');
+        
+
+        function aumento() {
+            var salarioAtual = Number(document.getElementById('salarioAtual').value)
+            
+            var bonusAumento = Number(salarioAtual * 15 / 100);
+            var novoSalario = Number((bonusAumento + salarioAtual));
+
+
+            p.innerHTML = `<p>Um funcionário que ganhava R$${salarioAtual.toFixed(2).replace('.', ',')}, com 15% de aumento passa a ganhar R$${novoSalario}<p>`
+
+        }
+        btn.addEventListener('click', aumento);
+    </script>
+</body>
+</html>

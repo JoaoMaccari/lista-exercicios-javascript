@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    background-color: rgb(70, 142, 236);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.384);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+h1 {
+    text-align: center;
+}
+
+#btn {
+    background-color: rgb(70, 142, 236);
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    margin-left: 200px;
+    color: white;
+    box-shadow: 20px, rgba(0, 0, 0, 0.384);
+}
+
+footer{
+    color: white;
+    position: absolute;
+    bottom: 0%;
+    left: 45%;
+}
+    </style>
+</head>
+<!-- PROGRAMA QUE VAI ORDENAR UMA LISTA DE NOMES EM ORDEM CRESCENTE OU DECRESCENTE -->
+<body>
+    <header>
+    </header>
+    <section>
+        <div>
+            
+            <p id="paragrafo">Insira o nome do aluno: <input type="text" id="nome"> <button onclick="adicionar()">Adiconar</button></p>
+            <h1 id="mensagem"></h1>
+            <button id="btn">ORDENAR</button>
+        </div>
+
+    </section>
+    <footer>
+        <p>&copy; Curso em vídeo</p>
+    </footer>
+    
+    <script>
+        //trazendo os elementos html para o Js
+        var mensagem = document.getElementById('mensagem');
+        var btn = document.getElementById('btn');
+        var nome =  document.getElementById('nome');
+        var paragrafo = document.getElementById('paragrafo');
+
+        //minha lista de nomes
+        let ListaNomes = []
+        
+
+        //função que vai adicionar nomes dentro do vetor
+        function adicionar() {
+            ListaNomes.push(nome.value);
+            //apaga o input que recebe os nomes
+            nome.value = ' '
+            
+            
+        }
+
+        //funcao de shuffler que é usada como parametro da função sort() do vetor
+        function ordenarArrey (a, b) {
+                //quando uso strings tenho que usar o localeCompare
+            return a.localeCompare(b)
+            //caso fose ordem inversa trocaria o b de lugar com o a
+        }
+
+
+        function sortear() {
+            //meu sort recebe a função que faz a ordenação como parametros, 
+            //dentro de shufle ela vai embaralhar os valores e retornar esses valores para a variavel sorted
+           var sorted = ListaNomes.sort(ordenarArrey)
+            //sorted está recebendo todos os valores ordenados 
+            
+           //uso o sorted para exibir os elementos
+            mensagem.innerHTML = sorted
+        } 
+        btn.addEventListener('click', sortear)
+    </script>
+</body>
+</html>

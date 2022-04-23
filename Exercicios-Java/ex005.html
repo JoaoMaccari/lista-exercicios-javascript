@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<header>
+    <p>Exercício 004</p>
+</header>
+
+<section>
+    <p>
+        Digite um número: <input type="text" name="texto" id="entrada"> 
+        <input type="button" value="clique em mim" onclick="btnClick()">
+    </p>
+
+    <p id="res">resultado</p>
+</section>
+
+<footer>
+
+</footer>
+    
+<script>
+    function btnClick() {
+
+        var num = document.getElementById('entrada');
+        var n1 = Number(num.value);
+        var res = document.getElementById('res');
+
+        var antes = n1 - 1;
+        var suce = n1 + 1;
+
+        res.textContent = `Analisando o valor ${n1}, seu antecessor é ${antes} e o sucessor é ${suce}`
+    }
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=+, initial-scale=1.0">
+    <title>Soma</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: rgb(74, 48, 99);
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        section{
+            text-align: center;
+            width: 100%;
+            height: 100vh;
+            vertical-align: middle;
+            padding: 15px;
+        }
+
+        #centro {
+            top: 50%;
+        }
+        p{
+            padding: 10px;
+            color: white;
+        }    
+            
+        div {
+            color: white;
+        }
+
+        #res {
+            text-align: center;
+        }
+
+        footer{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Somando números</h1>
+    </header>
+
+    <section>
+        <div id="centro">
+
+            <p>
+                primeiro numero:
+                <input type="number" id="n1">
+            </p>
+
+            <p>
+                <input type="button" value="+" onclick="soma()">
+                
+            </p>
+            
+            <p>
+                segundo numero
+                <input type="number" id="n2">
+            </p>
+            
+            
+            <p id="res">resultado</p>
+        </div>
+
+    </section>
+        
+    
+    <footer>
+        
+        <p>&copy; João Elias Maccari</p>
+    </footer>
+
+    <script>
+        function soma() {
+            //extraindo elementos html
+        var numero1 = document.getElementById('n1');
+        var numero2 = document.getElementById('n2');
+        var txt = document.getElementById('res')
+        
+    
+        //passando o valor da tag pra uma variavel
+        var n1 = Number(numero1.value); 
+        var n2 = Number(numero2.value);
+    
+        //processando dados
+        var soma = n1 + n2;
+
+        //saida
+            txt.textContent = 'fdgssgdf';
+            }
+        
+
+    </script>
+</body>
+</html>

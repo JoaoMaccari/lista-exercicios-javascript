@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex007</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: rgb(76, 145, 145);
+        }
+        header{
+            color: white;
+            text-align: center;
+        }
+
+        section{
+            background-color: white;
+            width: 500px;
+            border-radius: 15px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        div{
+            padding: 10px;
+            text-align: center;
+        }
+
+        #btn {
+            text-align: center;
+        }
+    
+        footer{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Ex007</h1>
+    </header>
+
+    <section>
+        <p>Primeira nota do aluno:
+            <input type="number" name="n1" id="nota1">
+        </p>
+            
+        <p>
+            Segunda nota do aluno:
+            <input type="number" name="n2" id="nota2">  
+        </p>
+
+        <p id="btn">
+            <input type="button" value="Calcular média" onclick="calculaMedia()">
+        </p>
+
+        <p id="res">
+            Resultado
+        </p>
+    </section>
+
+    <footer>
+        &copy; João Elias Maccari
+    </footer>
+
+    <script>
+        function calculaMedia() {
+            var n1 = document.getElementById('nota1');
+            var nota1 = Number(n1.value);
+
+            var n2 = document.getElementById('nota2');
+            var nota2 =  Number(n2.value);
+
+            var media = (nota1 + nota2) / 2;
+
+            document.getElementById('res').innerHTML = `A média do aluno é ${media.toFixed(1)}`
+        }
+    </script>
+</body>
+</html>

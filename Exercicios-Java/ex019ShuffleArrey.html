@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    background-color: rgb(70, 142, 236);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.384);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+h1 {
+    text-align: center;
+}
+
+#btn {
+    background-color: rgb(70, 142, 236);
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    margin-left: 200px;
+    color: white;
+    box-shadow: 20px, rgba(0, 0, 0, 0.384);
+}
+
+footer{
+    color: white;
+    position: absolute;
+    bottom: 0%;
+    left: 45%;
+}
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+    <section>
+        <div>
+            
+            <p id="paragrafo">Insira o nome do aluno: <input type="text" id="nome"> <button onclick="adicionar()">Adiconar</button></p>
+            <h1 id="mensagem"></h1>
+            <button id="btn">SORTEAR</button>
+        </div>
+
+    </section>
+    <footer>
+        <p>&copy; Curso em vídeo</p>
+    </footer>
+    
+    <script>
+        var mensagem = document.getElementById('mensagem');
+        var btn = document.getElementById('btn');
+        var nome = document.getElementById('nome');
+        var paragrafo = document.getElementById('paragrafo');
+        let listaNomes = []
+        let sorted
+        
+
+
+        function adicionar() {
+            listaNomes.push(nome.value);
+            nome.value = ' '
+
+        }
+
+
+        function sorteia() {
+            
+                                                            //neste método estou aleatorizando apenas um item da lista
+                mensagem.innerHTML = `O nome sorteado foi ${listaNomes[Math.floor(Math.random() * listaNomes.length)]}`
+                // para sortear um elemento de um vetor eu devo multiplicar pelo numero total de indices
+
+        }      
+        btn.addEventListener('click', sorteia);
+    </script>
+</body>
+</html>
