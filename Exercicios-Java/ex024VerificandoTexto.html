@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        body{
+    background-color: rgb(70, 142, 236);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.384);
+
+}
+
+footer{
+    color: white;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Verificando texto</h1>
+    </header>
+    <section>
+        <div>
+            Em qual cidade você nasceu: <input type="text" id="cidade"> <button id="btn">ENVIAR</button>
+        </div>
+
+        <p id="msg"></p>
+
+    </section>
+    <footer>
+        <p>&copy; João Elias Maccari</p>
+    </footer>
+    
+    <script>
+        var btn = document.getElementById('btn');
+        var msg = document.getElementById('msg');
+        var cidade = String( document.getElementById('cidade').value);
+        cidade = cidade.toLowerCase();
+        function verificar() {
+            //variavel que recebe a cidade colocada no input
+            
+            
+            var procura = cidade.indexOf('Santos')  ;
+                    
+
+            if (procura != -1) {
+                procura = true;
+            }else {
+                procura = false;
+            }
+
+            msg.innerHTML = `${procura}`
+        }
+        btn.addEventListener('click', verificar);
+    </script>
+</body>
+</html>
