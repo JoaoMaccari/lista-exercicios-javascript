@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        body{
+    background-color: rgb(70, 142, 236);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.384);
+
+
+}
+
+footer{
+    color: white;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Procurando Strings</h1>
+    </header>
+    <section>
+        <div>
+            Qual o seu nome completo? <input type="text" id="nome"> <button onclick="procuraString()">Procurar</button>
+        </div>
+
+        <p id="msg"></p>
+    </section>
+    <footer>
+        <p>&copy; João Elias Maccari</p>
+    </footer>
+    
+    <script>
+        function procuraString() {
+            var nome = String(document.getElementById('nome').value);
+            var msg = document.getElementById('msg');
+            
+            var string = String('Silva').trim()
+           
+            var valida = true
+
+            //procurar silva dentro do nome
+            if (nome.toLowerCase().indexOf(string.toLowerCase(),0 ) > -1) {
+                msg.innerHTML = `Seu nome tem Silva? ${valida}`
+            }else {
+                msg.innerHTML = `Seu nome tem Silva?: ${valida = false}`
+            }
+        }
+        
+
+    </script>
+</body>
+</html>
