@@ -1,0 +1,127 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: darkolivegreen;
+}
+
+.antes-cabecalho{
+    border: 1px solid red;
+    width: 70%;
+    margin: auto;
+    text-align: end;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+
+.header {
+    border: 1px solid red;
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+    overflow: hidden;
+    
+}
+
+.logo {
+    float: left;
+}
+
+.lista {
+    float: right;
+    margin-top: 9px;
+}
+
+.itens {
+    float: right;
+    list-style: none;
+    margin-right: 15px;
+
+}
+
+.main{
+    padding: 20px;
+    clear: both;
+}
+
+.imagem-fundo{
+    position: relative;
+    border: 1px solid red;
+    width: 70%;
+    margin: auto;
+    background-image: url(./img/pizza-g88c811484_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.local-name2{ 
+    border: 1px solid red;
+    display: inline-block;
+    color: white;
+    font-size: 3.3rem;
+    position: absolute;
+    top: 48%;
+    margin-left: 20%;
+}
+ .express {
+    position: absolute;
+    border: 1px solid red;
+    display: inline-block;
+    color: white;
+    bottom: 0px;
+    font-size: 1.5rem;
+ }
+
+ .cardapio {
+    padding: 15px;
+    border: 1px solid red;
+    width: 46%;
+    margin-left: 280px;
+    height: 600px;
+ }
+
+ .sup-bar{
+    border: 1px solid red;
+    display: block;
+    margin: 10px;
+    
+ }
+
+ .pizzas{
+    border: 1px solid red;
+    margin: 10px;
+    float: left;
+ }
+
+ .pizza-item{
+     float:left;
+     list-style: none;
+     margin-left: 150px;
+     display: inline-block;
+ }
+
+#frango{
+    margin-left: -140px;
+}
+
+#calabreza{
+    margin-left: -140px;
+}
+
+#strogonoff{
+    margin-left: -140px;
+}
+
+#chocolate {
+    margin-left: -140px;
+}
+
+#frango-ingredientes{
+    margin-left: 15px;
+    float: left;
+}
+
