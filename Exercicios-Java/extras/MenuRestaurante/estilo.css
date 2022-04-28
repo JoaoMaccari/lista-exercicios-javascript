@@ -79,7 +79,7 @@ body {
  .cardapio {
     padding: 15px;
     border: 1px solid red;
-    width: 46%;
+    width: 50%;
     margin-left: 280px;
     height: 600px;
  }
@@ -95,25 +95,30 @@ body {
     border: 1px solid red;
     margin: 10px;
     float: left;
+    width: 100%;
  }
 
  .pizza-item{
      float:left;
      list-style: none;
-     margin-left: 150px;
+     margin-left: 170px;
      display: inline-block;
  }
 
 #frango{
     margin-left: -140px;
+    border-radius: 150px;
 }
+
 
 #calabreza{
     margin-left: -140px;
+    border-radius: 55%;
 }
 
 #strogonoff{
     margin-left: -140px;
+    border-radius: 50%;
 }
 
 #chocolate {
@@ -121,7 +126,26 @@ body {
 }
 
 #frango-ingredientes{
-    margin-left: 15px;
+    margin-left: 70px;
     float: left;
 }
+
+#calabreza-ingredientes{
+    float: left;
+    margin-left: 80px;
+
+}
+
+#strogonoff-ingredientes {
+    float: left;
+    margin-left: 60px;
+}
+
+#chocolate-ingredientes {
+    margin-left: 80px;
+    float: left;
+}
+
+
+
 
