@@ -1,20 +1,25 @@
-var submit = document.getElementById('enviar');
 
-function calculaTotal () {
-    //selecionando as opcoes
-    var select = document.getElementById('sabores');
-    var saborFrango = document.getElementById('op-frango') = "frango";
-    var saborCalabresa = document.getElementById('op-calabresa') = "calabresa";
-    var saborStrogonoff = document.getElementById('op-strogonoff')= "strogonoff";
-    var saborChocolota = document.getElementById('op-chocolate') = "chocolate";
+    
 
    
+ 
+function attSelect () {
+    var select = document.getElementById('sabores');
+   let optionValue = select.options[select.selectedIndex];
 
-    switch (select) {
-        case 1: ""
-    }
+   let opcao = String(optionValue.value);
+    console.log(opcao)
+   var preco = 0
+  
+   
 
-    var submit = document.getElementById('submit'); 
+   switch (opcao) {
+    case "frango":
+        preco   += 30.00;
+        break;
+    case "calabresa":
+        preco  += 34.00;
+        break;
+   }
+   console.log(preco);
 }
-
-submit.addEventListener('click', calculaTotal)
