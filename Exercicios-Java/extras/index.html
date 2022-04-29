@@ -94,20 +94,19 @@
             </div>
 
             <form class="myForm">
-
-               
-
-                <select name="sabores" id="sabores" onchange="attSelect()">
-                    <option value="sabores">Escolha um sabor</option>
+                <select name="sabores" id="sabores" multiple>
+                    <option value="sabores"  >Selecione o(s) sabores</option>
                     <option id="op-frango" value="frango">Frango</option>
                     <option id="op-calabresa" value="calabresa">Calabresa</option>
                     <option id="op-strogonoff" value="strogonoff">Strogonoff</option>
                     <option id="op-chocolate" value="chocolate">Chocolate</option>
-                </select>
+                </select><br>
+               
 
-                <input id="enviar" type="submit">
+
+                <input type="button" id="enviar" value="enviar">
             </form>
-
+                <button onclick="addCart()">adicionar ao carrinho</button>
 
         </div>
     </nav>

@@ -1,25 +1,24 @@
 
+function addCart () {
+
+    
+    var select = document.getElementById('sabores');
+   let optionValue = select.options[select.selectedIndex];
+   console.log(select)
+
+   let opcao = optionValue.value;
+  
+    var pizzas = opcao
+    var carrinho =[]
+    
+    for (let i =0; i<carrinho.length; i++) {
+        carrinho.push(pizzas)
+    
+    }
+
+    console.log(carrinho)
+}
     
 
    
  
-function attSelect () {
-    var select = document.getElementById('sabores');
-   let optionValue = select.options[select.selectedIndex];
-
-   let opcao = String(optionValue.value);
-    console.log(opcao)
-   var preco = 0
-  
-   
-
-   switch (opcao) {
-    case "frango":
-        preco   += 30.00;
-        break;
-    case "calabresa":
-        preco  += 34.00;
-        break;
-   }
-   console.log(preco);
-}
