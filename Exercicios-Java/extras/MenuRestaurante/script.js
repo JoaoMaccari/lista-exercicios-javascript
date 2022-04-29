@@ -1,22 +1,16 @@
-
+const vet =[]
 function addCart () {
 
     
     var select = document.getElementById('sabores');
    let optionValue = select.options[select.selectedIndex];
-   console.log(select)
+   console.log(optionValue)
 
    let opcao = optionValue.value;
+   console.log(opcao)
   
-    var pizzas = opcao
-    var carrinho =[]
-    
-    for (let i =0; i<carrinho.length; i++) {
-        carrinho.push(pizzas)
-    
-    }
-
-    console.log(carrinho)
+    vet.push(opcao)
+    console.log(vet)
 }
     
 
