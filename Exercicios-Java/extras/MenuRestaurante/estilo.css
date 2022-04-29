@@ -82,6 +82,7 @@ body {
     width: 50%;
     margin-left: 280px;
     height: 600px;
+    position: relative;
  }
 
  .sup-bar{
@@ -146,6 +147,10 @@ body {
     float: left;
 }
 
-
+.myForm {
+    position: absolute;
+    top: 60%;
+    margin-left: 30%;
+}
 
 
