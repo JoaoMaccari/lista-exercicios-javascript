@@ -1,18 +1,47 @@
 const vet =[]
+let quantidadeItens  = 0
+
 function addCart () {
 
     
-    var select = document.getElementById('sabores');
-   let optionValue = select.options[select.selectedIndex];
-   console.log(optionValue)
+    let select = document.getElementById('sabores');
+    let optionValue = select.options[select.selectedIndex];
+    let opcao = optionValue.value;
 
-   let opcao = optionValue.value;
-   console.log(opcao)
-  
-    vet.push(opcao)
-    console.log(vet)
-}
+   
     
+    vet.push(opcao);
+    
+  
+
+    for (let i = 0; i<vet.length;i++) {
+        quantidadeItens ++;
+        
+    }
+    
+    
+    
+}
+
+//já consegui pegar a quantidade e buscar o preço do produto
+function somaValores () {
+    
+    var preco = 0;
+    
+    
+    
+        if (vet.indexOf("frango") > -1) {
+            preco = preco+ 30.00; 
+           
+        }
+        
+    
+    console.log(quantidadeItens)
+    console.log(vet) 
+    console.log(preco);  
+
+    
+}
 
    
  
