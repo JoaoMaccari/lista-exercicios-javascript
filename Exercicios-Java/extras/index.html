@@ -23,7 +23,7 @@
             </ul>
         </div>
     </header>
-
+                        <!-- MAIN -->
     <main class="main">
         <div class="imagem-fundo">
             <div class="local-name">
@@ -34,6 +34,7 @@
 
 
     </main>
+                          <!-- CARDAPIO -->
     <nav>
         <div class="cardapio">
             <div class="sup-bar">
@@ -92,7 +93,7 @@
 
 
             </div>
-
+                    <!-- FORMULÁRIO -->
             <form class="myForm">
                 
                 <select name="sabores" id="sabores" multiple>
@@ -102,11 +103,17 @@
                     <option id="op-strogonoff" value="strogonoff">Strogonoff</option>
                     <option id="op-chocolate" value="chocolate">Chocolate</option>
                 </select><br>
-                    
+
             </form>
-                    <button onclick="addCart()">adicionar ao carrinho</button>
-<input type="button" id="enviar" value="enviar" onclick="somaValores()">
+
+            <button id="addCart" onclick="addCart()">adicionar ao carrinho</button>
+
+            <input type="button" id="enviar" value="enviar" onclick="somaValores()">
+            <div class="msgQtd"></div>
+            <div class="msgQtdSabor"></div>
         </div>
+
+
     </nav>
 
 
