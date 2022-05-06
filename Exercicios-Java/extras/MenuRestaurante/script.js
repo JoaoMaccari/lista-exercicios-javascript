@@ -1,6 +1,6 @@
 const vet =[]
 let quantidadeItens  = 0
-var vetQtItens = []
+const vetQtItens = []
 
 //funcao que adiciona itens no carrinho e soma a quantidade de itens pedidos
 function addCart () {
@@ -12,14 +12,9 @@ function addCart () {
     vet.push(opcao);
     quantidadeItens = vet.length
 
-
-    
-    
     console.log(quantidadeItens)
     console.log(vet)
 
-    
-    
 }
     
    
@@ -37,19 +32,23 @@ function somaValores () {
 
     var msgQtd = document.getElementsByClassName('msgQtd')[0];
     var msgQtdSabor = document.getElementsByClassName("msgQtdSabor")[0]
-    var totfrango = []
-    var totcalabresa=0
+    var totfrango = [];
+    var totcalabresa = [];
 
         if (vet.indexOf("frango") > -1 && opcao == "frango") {
-         preco = 30.00;
-         //                                                     TEM QUE ITERAR O ARREY
-            // for (let i of vet.values ) {
-            //     totfrango[i] += opcao
-            // }
+            preco = 30.00;
+            for (let i = 0; i< vet.length; i++ ) {
+                totfrango.push(opcao);
+            }
         }
-        if (vet.indexOf("calabresa") > -1) {
+
+        if (vet.indexOf("calabresa") > -1 && opcao == "calabresa") {
              preco = 34.00;
-             totcalabresa ++
+             for (let i = 0; i< vet.length; i++) {
+                totcalabresa.push(opcao)
+                console.log(totcalabresa.length)
+             }
+             
         }
         if (vet.indexOf("strogonoff")> -1) {
             preco = 28.00;
@@ -58,23 +57,38 @@ function somaValores () {
             preco = 29.00
         }
        
-       
-
-
+        //soma o preço total
         for (let i = 0; i < vet.length;i++) {
             soma += preco;
         }
         
+        //mostra quanto pedidos ao todo foram realizados
         msgQtd.innerHTML = `<p>Você realizou ${vet.length} pedidos<p>` 
-        if (totfrango>= 1 ) {
-             msgQtdSabor.innerHTML = `${totcalabresa.length}: Pizza sabor frango `
+
+        //mostra quantos de cada sabor foi pedido
+       
+        for (let i = 0; i < vet.length; i++) {
+
+            if (totfrango.length >= 1 ) {
+                 msgQtdSabor.innerHTML= `${totfrango.length}: Pizza sabor frango \n`
+                    if (totcalabresa.length >= 1) {
+                    msgQtdSabor.innerHTML += `${totcalabresa.length}: Pizza sabor calabresa\n`
+            }
+            } 
+
+            
+
         }
+        
+        
+        
                          
 
    console.log(preco)
    console.log(soma)
    console.log(totfrango)
-   console.log(opcao)
+   console.log(totcalabresa)
+   
   
      
 }
