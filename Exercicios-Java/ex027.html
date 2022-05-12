@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        body{
+    background-color: rgb(70, 142, 236);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.384);
+
+}
+
+footer{
+    color: white;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1></h1>
+    </header>
+    <section>
+        <div>
+            Digite seu nome completo: <input id="nome" type="text" placeholder="Insira o nome aqui">
+            <button onclick="separaNome(this)">Separar nome</button>
+            <p id="msg">msg</p>
+        </div>
+
+    </section>
+    <footer>
+        <p>&copy; Curso em vídeo</p>
+    </footer>
+    
+    <script>
+        function separaNome() {
+            let nome = String(document.getElementById("nome").value)
+            let msg = document.getElementById("msg")
+            let arr = nome.split(" ")
+            
+            
+            let primeiro = arr[0]
+            let ultimo = arr[arr.length - 1]
+
+            
+            msg.innerHTML = `<p><h2>Muito prazer em te conhecer ${nome}</h2></p> <br>
+                            Seu primeiro nome é <mark style="background-color: red">${primeiro}</mark> <br>
+                            Seu ultimo nome é ${ultimo}`
+            console.log(primeiro)
+            console.log(ultimo)
+        }
+
+    </script>
+</body>
+</html>

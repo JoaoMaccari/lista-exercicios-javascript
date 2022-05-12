@@ -58,19 +58,19 @@ footer{
             let nome = String(document.getElementById('nome').value);
             let msg = document.getElementById('msg');
             
-            //crio uma variavel que guarda um arrey com valor do imput dividido, cada p
+            //crio uma variavel que guarda um arrey com valor do imput dividido
             let divisao = nome.split(" ")
            console.log(divisao)
 
             
             //crio uma string de comparação
-            let search = 'Silva'.split(" ")
+            let search = 'Silva'
            console.log(search)
            //variavel de validação
             var valida = true
 
             // //procurar silva dentro do nome
-             if (divisao.indexOf("Silva") > -1) {
+             if (divisao.indexOf(search) > -1) {
                  msg.innerHTML = `Seu nome tem Silva?: ${valida}`
              }else {
                 msg.innerHTML = `Seu nome tem Silva?: ${valida = false}`
