@@ -50,20 +50,31 @@ footer{
     </footer>
     
     <script>
-        function procuraString() {
-            var nome = String(document.getElementById('nome').value);
-            var msg = document.getElementById('msg');
             
-            var string = String('Silva').trim()
-           
+            
+            
+        function procuraString() {
+            //pego o valor do imput
+            let nome = String(document.getElementById('nome').value);
+            let msg = document.getElementById('msg');
+            
+            //crio uma variavel que guarda um arrey com valor do imput dividido, cada p
+            let divisao = nome.split(" ")
+           console.log(divisao)
+
+            
+            //crio uma string de comparação
+            let search = 'Silva'.split(" ")
+           console.log(search)
+           //variavel de validação
             var valida = true
 
-            //procurar silva dentro do nome
-            if (nome.toLowerCase().indexOf(string.toLowerCase(),0 ) > -1) {
-                msg.innerHTML = `Seu nome tem Silva? ${valida}`
-            }else {
+            // //procurar silva dentro do nome
+             if (divisao.indexOf("Silva") > -1) {
+                 msg.innerHTML = `Seu nome tem Silva?: ${valida}`
+             }else {
                 msg.innerHTML = `Seu nome tem Silva?: ${valida = false}`
-            }
+             }
         }
         
 

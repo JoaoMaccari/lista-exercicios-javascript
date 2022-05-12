@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        body{
+    background-color: rgb(70, 142, 236);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.384);
+
+}
+
+footer{
+    color: white;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1></h1>
+    </header>
+    <section>
+        <div>
+            Digite uma frase: <input type="text" id="frase">
+        </div>
+        
+        <p id="analise">
+            <button id="btn" onclick="mostraLetras()">ANALISAR</button>
+        </p>
+        <p id="msg"></p>
+
+    </section>
+    <footer>
+        <p>&copy; João Elias Maccari</p>
+    </footer>
+    
+    <script>
+      
+       
+
+       function mostraLetras() {
+            let frase = String(document.getElementById('frase').value);
+            let msg = document.getElementById("msg");
+           
+            
+            let letraProcurada = "a";
+
+
+            let quantidade = 0;
+            let posicaoInicial = frase.indexOf("a") +1;
+            let posicaoFinal = frase.lastIndexOf("a") +1;
+
+            //i vai percorrer o length de frase
+            for(i in frase) {
+                console.log(frase[i]);
+                if (frase[i] == letraProcurada) {
+                 
+                    quantidade ++
+                
+                }
+            }
+
+
+            msg.innerHTML = `<p>A letra a foi encontrada ${quantidade} vezes<p> <br>
+                             <p>A primeira letra A apareceu na posição ${posicaoInicial}<p> <br>
+                             <p>A ultima letra A apareceu na posição ${posicaoFinal}<p>`
+            
+           
+           
+          
+           
+             
+             
+           
+             
+       }
+    </script>
+</body>
+</html>
