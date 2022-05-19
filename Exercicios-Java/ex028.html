@@ -52,6 +52,7 @@
         input{
             border-radius: 5px;
             padding: 5px;
+            border: none;
         }
 
         button {
@@ -73,32 +74,33 @@
     </div>
     
     <script>
-        
+        let numero = document.getElementById("numero");
         let h3 = document.getElementsByClassName("titulos")[2];
         let p = document.getElementsByClassName("titulos")[3];
         let aleatorio = Math.floor(Math.random() *1 +1);
         
         
         function adivinhar () {
-            var valueNumero = Number(document.getElementById("numero").value);
-            
-            console.log(aleatorio)
-            if (valueNumero === aleatorio) {
+           let valorNumero = numero.value;
+           
+
+            if (valorNumero == aleatorio) {
                 h3.innerHTML = "PROCESSANDO..."
                 setInterval(function() {
                     p.innerHTML = "PARABÉNS! Você acertou!"
-                    
+                    numero.value = ""
+                    numero.focus();
                 },1000)
                 }else{
                     h3.innerHTML = "PRCESSANDO..."
                     setInterval(function(){
                     p.innerHTML = "VOCÊ ERROU! Tente na próxima!"
-                    
+                    numero.value = ""
+                    numero.focus();
                 },1000)
-                console.log(valueNumero)
-                
+                 
             }    
-             valueNumero.value = " "
+            
         }
 
     </script>
