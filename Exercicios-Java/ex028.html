@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de adivinhação</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            background:#417ea4;
+            background: -webkit-linear-gradient(to top, #417ea4, #0008f5);
+            background: linear-gradient(to top, #417ea4, #0008f5);
+        }
+        .main-container{
+            position: relative;
+            width: 100vw;
+            height: 100vh; 
+            color: white;
+        }
+
+        .container{
+            width: 1000px;
+            border: 5px solid magenta;
+            padding: 15px;
+            border-radius: 15px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .container, h2, span, input, button, h3, p{
+            margin-top: 10px;
+        }
+
+        h2, h1, h3, p{
+            text-align: center;
+        }
+
+        span{
+            
+            margin-left: 300px;
+        }
+
+        input{
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1 class="titulos">Vou pensar em um número entre 0 e 5. Tente adivinhar...</h1>
+            <h2 class="titulos">Em qual número eu pensei?</h2>
+            <span>Digite um número:</span> <input id="numero"  type="number">
+            <button onclick="adivinhar()">Adivinhar</button>
+            <h3 class="titulos"></h3>
+            <p class="titulos"></p>
+        </div>
+    </div>
+    
+    <script>
+        
+        let h3 = document.getElementsByClassName("titulos")[2];
+        let p = document.getElementsByClassName("titulos")[3];
+        let aleatorio = Math.floor(Math.random() *1 +1);
+        
+        
+        function adivinhar () {
+            var valueNumero = Number(document.getElementById("numero").value);
+            
+            console.log(aleatorio)
+            if (valueNumero === aleatorio) {
+                h3.innerHTML = "PROCESSANDO..."
+                setInterval(function() {
+                    p.innerHTML = "PARABÉNS! Você acertou!"
+                    
+                },1000)
+                }else{
+                    h3.innerHTML = "PRCESSANDO..."
+                    setInterval(function(){
+                    p.innerHTML = "VOCÊ ERROU! Tente na próxima!"
+                    
+                },1000)
+                console.log(valueNumero)
+                
+            }    
+             valueNumero.value = " "
+        }
+
+    </script>
+</body>
+</html>
