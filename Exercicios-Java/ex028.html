@@ -86,14 +86,14 @@
 
             if (valorNumero == aleatorio) {
                 h3.innerHTML = "PROCESSANDO..."
-                setInterval(function() {
+                setTimeout(function() {
                     p.innerHTML = "PARABÉNS! Você acertou!"
                     numero.value = ""
                     numero.focus();
                 },1000)
                 }else{
                     h3.innerHTML = "PRCESSANDO..."
-                    setInterval(function(){
+                    setTimeout(function(){
                     p.innerHTML = "VOCÊ ERROU! Tente na próxima!"
                     numero.value = ""
                     numero.focus();
@@ -102,7 +102,7 @@
             }    
             
         }
-
+            
     </script>
 </body>
 </html>
