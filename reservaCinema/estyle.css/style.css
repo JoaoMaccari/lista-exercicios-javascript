@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.main-container{
+    background-color: grey;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.container{
+    width: 95vmin ;
+    height: 200px;
+    position: absolute;
+    border: 1px solid magenta;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.cadeiras{
+    width: 76vmin;
+    border: 1px solid blue;
+    display: block;
+    margin: auto;
+}
+
+.botao {
+    width: 65px;
+    height: 65px;
+    background-image: url(../assets/chain.png);
+}
+
+.btn{
+    width: 65px;
+    height: 65px;
+    background-image: url(../assets/chain.png);
+}
