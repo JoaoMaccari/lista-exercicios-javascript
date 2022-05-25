@@ -1,39 +1,41 @@
 var freeSeat = ["A1", "A2", "A3" , "A4", "A5", "A6", "A7", "A8", "A9", "A10"];
 var busySeat = []
-var booking = document.getElementsByClassName("booking")[0];
-  let click =0
+
+
 
 function select(seat) {
-    click++
-    let allFree = true
-    
-    if (click < 1) {
-        
+            var booking = document.getElementsByClassName("booking")[0];
+            for (i in freeSeat) {
+                freeSeat[i] = true
+            }
+
+            disponiveis(seat)
+
             for (i in freeSeat) {
         
-                if (freeSeat[i] == seat.value) {
-                 busySeat.push(seat.value);
-                freeSeat.splice(i, 1);
-            
-                console.log(busySeat);
-                console.log(freeSeat);
-            }else if (seat.value == freeSeat[i]) {
-
-        }
-      
-    }
-
-    }
+                if (freeSeat[i] == true) {
+                    booking.innerHTML = `cadeira ${seat.value} reservada!`
+                }else{
+                    booking.innerHTML = `RESERVADA!`
+                }
+            }
     
     
-
-    
-    
-    
-    
-    booking.innerHTML = `cadeira ${seat.value} reservada!`
 
     // newbooking(seat);
+}
+
+function disponiveis(s) {
+    let set = s.value
+    for (i in freeSeat) {
+        if (freeSeat[i] == true) {
+                busySeat.push(set);
+                freeSeat.splice(i, 1);
+                freeSeat[i] = false;
+                return freeSeat[i]
+                
+        }
+    }
 }
 
 // function newbooking(seat) {
