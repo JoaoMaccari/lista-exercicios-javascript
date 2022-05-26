@@ -29,14 +29,16 @@
     margin: auto;
 }
 
-.botao {
-    width: 65px;
-    height: 65px;
-    background-image: url(../assets/chain.png);
-}
 
 .btn{
     width: 65px;
     height: 65px;
     background-image: url(../assets/chain.png);
+}
+
+
+.ocupado{
+    width: 65px;
+    height: 65px;
+    background-image: url(../assets/chain-booking.png);
 }
