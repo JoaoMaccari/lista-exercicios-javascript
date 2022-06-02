@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estyle/estilo.css">
+    <title>média</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1>lançamento de notas</h1>
+            <div>
+                selecione a disciplina 
+                <select name="Matérias" id="materias" onchange="capturaSelect()">
+                    <option value="" selected>Selecione a matéria</option>
+                    <option value="prog-pc">Programação de computadores</option>
+                    <option value="intro-info">Introdução a informática</option>
+                    <option value="linguagens">Linguagens de progrmação</option>
+                </select>
+            </div>
+
+            <table class="table">
+                <th>
+                    nome
+                </th>
+                <th>
+                    prova 1 
+                </th>
+                <th>
+                    prova 2
+                </th>
+                
+                <th>
+                    faltas
+                </th>
+                <tr>
+                    <td><input id="name" class="inputs" type="text" placeholder="digite o nome" required></td>
+                    <td><input id="n1" class="inputs" type="number" required></td>
+                    <td><input id="n2" class="inputs" type="number" required></td>
+                    <td><input id="faltas" class="inputs" type="number" required></td>
+                </tr>
+                
+            </table>
+
+            <div class="botoes">
+                <button onclick="calculaMedia()">Calcular média</button>
+                <button onclick="limpar()">limpar</button>
+            </div>
+
+            <div class="resultado">
+                    
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="./script/script.js"></script>
+</body>
+</html>
