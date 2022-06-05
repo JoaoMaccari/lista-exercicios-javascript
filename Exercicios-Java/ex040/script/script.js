@@ -1,21 +1,25 @@
-
+let materias = document.getElementById("materias");
 let nome = document.getElementById("name");
 let nota1 = document.getElementById("n1");
 let nota2 = document.getElementById("n2");
 let falta = document.getElementById("faltas");
+var disciplina =" "
 
-function capturaSelect() {
 
-    let select = document.getElementById("materias");
-    let opcao1 = select.options[select.selectedIndex].text
 
-    
+
+function getMat(chosen){
+  
+    console.log(disciplina);
+    disciplina = chosen
+  
 }
 
-function calculaMedia() {
 
-    
-    
+function getMedia() {
+
+   
+   
     let name = String(nome.value);
     let n1 = Number(nota1.value);
     let n2 = Number(nota2.value);
@@ -36,21 +40,17 @@ function calculaMedia() {
     let reprovado = document.createTextNode(`O aluno ${name} está reprovado com média ${media}`)
     divRes.appendChild(p)
     
-    console.log(media);
+   
     if ( media >=7) {
-        p.appendChild(mediaMior)
+       return p.appendChild(mediaMior)
      
     }else if(media >=5 ) {
-        p.appendChild(recuperação)
+       return p.appendChild(recuperação)
     }else {
-        p.appendChild(reprovado)
+      return  p.appendChild(reprovado)
     }
     
     
-//    limpar(conteudo)
+
 }
 
-// function limpar(cont) {
-//     console.log(cont)
-//     cont = cont + 0
-// }

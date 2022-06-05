@@ -13,7 +13,7 @@
             <h1>lançamento de notas</h1>
             <div>
                 selecione a disciplina 
-                <select name="Matérias" id="materias" onchange="capturaSelect()">
+                <select name="Matérias" id="materias" onchange="getMat(this.options[this.selectedIndex].text)">
                     <option value="" selected>Selecione a matéria</option>
                     <option value="prog-pc">Programação de computadores</option>
                     <option value="intro-info">Introdução a informática</option>
@@ -45,7 +45,7 @@
             </table>
 
             <div class="botoes">
-                <button onclick="calculaMedia()">Calcular média</button>
+                <button onclick="getMedia()">Calcular média</button>
                 <button onclick="limpar()">limpar</button>
             </div>
 
