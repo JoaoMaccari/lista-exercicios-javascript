@@ -12,7 +12,7 @@
 }
 
 .card{
-    width: 800px;
+    width: 900px;
     
     position: absolute;
     left: 50%;
@@ -47,6 +47,7 @@
 
 .input_div, p , input {
 margin-top: 10px;
+
 }
 
 .input_div, input{
@@ -62,6 +63,9 @@ margin-top: 10px;
 
 #msg{
     position: relative;
+    max-width: 50%;
     left: 85px;
     top: 55px;
+    transition: 0.5s;
 }
+
