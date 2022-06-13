@@ -1,0 +1,67 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.main_container{
+    width: 100vw;
+    height: 100vh;
+    background-color: gray;
+    position: relative;
+}
+
+.card{
+    width: 800px;
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.inner_card_left{
+    width: 50%;
+    height: 200px;
+    border: 1px solid  black;
+    float: left;
+    overflow:hidden;
+}
+
+
+
+.inner_card_right{
+    width: 49%;
+    height: 200px;
+    border: 1px solid  black;
+    float: right;
+}
+
+.input_div{
+    position: relative;
+    left: 85px;
+    top: 55px;
+    
+}
+
+.input_div, p , input {
+margin-top: 10px;
+}
+
+.input_div, input{
+    margin-left: 10px;;
+}
+
+#input_velo{
+    border-radius: 10px;
+    padding: 13px;
+    border: none;
+    left: 10px;
+}
+
+#msg{
+    position: relative;
+    left: 85px;
+    top: 55px;
+}
