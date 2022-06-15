@@ -13,7 +13,7 @@
             <h1>lançamento de notas</h1>
             <div>
                 selecione a disciplina 
-                <select name="Matérias" id="materias" onchange="getMat(this.options[this.selectedIndex].text)">
+                <select name="Matérias" id="materias" onchange="getMat()">
                     <option value="" selected>Selecione a matéria</option>
                     <option value="prog-pc">Programação de computadores</option>
                     <option value="intro-info">Introdução a informática</option>
@@ -33,13 +33,13 @@
                 </th>
                 
                 <th>
-                    faltas
+                    Disciplina
                 </th>
                 <tr>
                     <td><input id="name" class="inputs" type="text" placeholder="digite o nome" required></td>
                     <td><input id="n1" class="inputs" type="number" required></td>
                     <td><input id="n2" class="inputs" type="number" required></td>
-                    <td><input id="faltas" class="inputs" type="number" required></td>
+                    <td><input id="disc" class="inputs" type="number" required></td>
                 </tr>
                 
             </table>

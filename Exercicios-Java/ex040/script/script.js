@@ -6,19 +6,21 @@ let falta = document.getElementById("faltas");
 var disciplina =" "
 
 
-
-
-function getMat(chosen){
-  
-    console.log(disciplina);
-    disciplina = chosen
-  
+function getMat (){
+  let d = document.getElementById("materias");
+  let displayText = d.options[d.selectedIndex].value
+  document.getElementById("disc").value = displayText;
+    return displayText
 }
+
 
 
 function getMedia() {
 
    
+
+
+  
    
     let name = String(nome.value);
     let n1 = Number(nota1.value);
