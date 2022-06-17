@@ -4,21 +4,23 @@
     box-sizing: border-box;
 }
 
+
+
 .main_container{
     width: 100vw;
     height: 100vh;
-    background-color: gray;
+    background-image: url("../assets/police.jpg");
+    background-size: contain;
+    background-position: 60% ,50% ;
     position: relative;
 }
 
 .card{
     width: 900px;
-    
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 20%;
     transform: translate(-50%, -50%);
-
 }
 
 .inner_card_left{
@@ -27,15 +29,18 @@
     border: 1px solid  black;
     float: left;
     overflow:hidden;
+    border-radius: 15px;
 }
 
 
 
 .inner_card_right{
+    
     width: 49%;
     height: 200px;
-    border: 1px solid  black;
+    border: 1px solid  #689b1b;
     float: right;
+    border-radius: 15px;
 }
 
 .input_div{
@@ -62,10 +67,12 @@ margin-top: 10px;
 }
 
 #msg{
+    color: white;
     position: relative;
     max-width: 50%;
-    left: 85px;
-    top: 55px;
+    left: 95px;
+    top: 20px;
     transition: 0.5s;
+    padding: 15px;
 }
 
