@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: grey;
+    position: relative;
+}
+
+.mainDiv{
+    max-width: 50% ;
+    border: 1px solid black;
+    min-height: 300px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.innerDiv{
+    border: solid 1px yellow;
+    max-width: 50%;
+    min-width: 50%;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.innerDiv label, input ,button, p{
+    text-align: center;
+   display: block; 
+   padding: 10px;
+   margin: auto;
+   margin-top: 10px;
+   
+}
+
+label{
+    
+}
