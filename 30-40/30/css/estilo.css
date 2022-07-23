@@ -5,35 +5,66 @@
 }
 
 body{
+    font-family: Arial, Helvetica, sans-serif;
     background-color: grey;
     position: relative;
+    background-image: url('../asset/num.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .mainDiv{
-    max-width: 50% ;
-    border: 1px solid black;
-    min-height: 300px;
+    max-width: 60% ;
+    min-height: 500px;
     margin: auto;
     margin-top: 50px;
+    background-color: #B36F60;
+    position: relative;
+    
 }
 
 .innerDiv{
-    border: solid 1px yellow;
+    position: relative;
+    top: 20px;
     max-width: 50%;
-    min-width: 50%;
+    min-height: 300px;
     margin: auto;
-    margin-top: 70px;
+    background-color: #805045;
+    
+    
+    
 }
 
-.innerDiv label, input ,button, p{
-    text-align: center;
+.innerDiv label, #numero ,#btn{
+   text-align: center;
    display: block; 
    padding: 10px;
    margin: auto;
-   margin-top: 10px;
-   
+   margin-top: 20px;
+   color: bisque;
 }
 
-label{
+#btn{
+    color: black;
+    font-size: 1.1em;
+    font-weight: 700;
+    border-radius: 15px;
+    border: none;
+    max-width: 70%;
     
+
 }
+
+#numero{
+    max-width: 70%;
+    color: #805045;
+}
+
+
+#res{
+    position: absolute;
+    left: 45%;
+    top: 60%;
+}
+
+/* diminuir a min widht body no media query */

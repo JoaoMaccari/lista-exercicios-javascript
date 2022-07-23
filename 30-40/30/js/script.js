@@ -1,17 +1,22 @@
 let btn = document.querySelector("#btn")
 
 btn.addEventListener("click", function(){
-    let input = document.querySelector("#numero").value
-    let numero =Number(input)
+    let input = document.querySelector("#numero")
+    let numero =Number(input.value)
 
     let resultado = parOuImpar(numero)
-    console.log(resultado);
     
+
+    console.log(resultado);
     console.log(numero);
     console.log(typeof  numero)
 
-    
+    input.value = ""
+    input.focus()
+
 })
+
+
 
 function parOuImpar(n){
     let par = "O número é par"
