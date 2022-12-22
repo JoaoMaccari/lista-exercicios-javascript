@@ -13,20 +13,22 @@
 
 .container{
     width: 95vmin ;
-    height: 200px;
+    height: 300px;
     position: absolute;
     border: 1px solid magenta;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 15px;
 
 }
 
 .cadeiras{
-    width: 72vmin;
+    width: 80vmin;
+    padding: 10px;
     border: 1px solid blue;
     display: block;
-    margin: auto;
+    margin-left: 97px;
 }
 
 
@@ -34,6 +36,7 @@
     width: 65px;
     height: 65px;
     background-image: url(../assets/chain.png);
+    margin: 0 auto ;
 }
 
 
